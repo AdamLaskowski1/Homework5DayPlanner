@@ -1,12 +1,14 @@
 $(document).ready(function(){
     checkTime();
 
+    
     function saveToLocal(){
         var textInput = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
         localStorage.setItem(time, textInput);
     }
 
+    // Function to compare hour with current time 
     function checkTime(){
         var time = moment().hours();
         console.log(time);
